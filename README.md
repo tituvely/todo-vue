@@ -1,5 +1,9 @@
 # todo-vue
 
+Vue 공식문서의 todo-list를 구현해본다.
+
+https://kr.vuejs.org/v2/examples/todomvc.html
+
 ## Project setup
 ```
 npm install
