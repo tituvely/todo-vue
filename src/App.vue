@@ -13,6 +13,7 @@
 import Header from "./components/Header";
 import Main from "./components/Main";
 import Footer from "./components/Footer";
+import { hello } from "./service/todo-service";
 
 export default {
   name: 'App',
@@ -21,9 +22,11 @@ export default {
     Main,
     Header
   },
-  mounted() {
+  async mounted() {
     window.addEventListener('hashchange', this.onHashChange);
     this.onHashChange();
+    const response =  await hello();
+    this.todos = response;
   },
   beforeDestroy() {
     window.removeEventListener('hashchange', this.onHashChange);
